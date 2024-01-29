@@ -12,3 +12,7 @@ CREATE TABLE student  (
 ALTER TABLE student RENAME TO students
 
 
+--delete TABLE
+DROP TABLE student
+
+
