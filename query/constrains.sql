@@ -1,0 +1,5 @@
+-- Not NULL  -- don't insert null VALUES
+-- UNIQUE -- insert unique VALUES
+--primary key -- don't exist null value and ALWAYS be UNIQUE and also create a index.ADD
+--Foreign key -- 
+-- CHECK -- check a  CONDITION
