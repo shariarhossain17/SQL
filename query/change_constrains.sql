@@ -16,3 +16,10 @@ CREATE TABLE "user2"(
     first_name VARCHAR(255) UNIQUE NOT NULL,
     age INT DEFAULT 18
 )
+
+
+ALTER TABLE user2
+ADD COLUMN password VARCHAR(255) DEFAULT 'admin123' NOT NULL
+
+
+SELECT  * FROM user2 
