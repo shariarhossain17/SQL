@@ -33,7 +33,23 @@ ALTER TABLE user2
 ADD COLUMN demo int;
 
 ALTER TABLE user2
-    Alter COLUMN demo type text
+    Alter COLUMN demo type text ;
+
+
+--set default VALUES
+ALTER TABLE user2 
+    Alter COLUMN demo set DEFAULT 'Bangladesh';
+
+-- DROP DEFAULT VALUES
+ALTER TABLE user2 
+    Alter COLUMN demo DROP DEFAULT;
+
+
+--
+--insert USER
+INSERT INTO user2(email,first_name) VALUES ('sh@1.com','sh1');
+
+
 
 -- get data
 SELECT  * FROM user2 
