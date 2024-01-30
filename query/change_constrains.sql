@@ -27,4 +27,13 @@ ADD COLUMN password VARCHAR(255) DEFAULT 'admin123' NOT NULL
 --drop COLUMN
 ALTER TABLE user2 DROP COLUMN age
 
+--change data type
+
+ALTER TABLE user2
+ADD COLUMN demo int;
+
+ALTER TABLE user2
+    Alter COLUMN demo type text
+
+-- get data
 SELECT  * FROM user2 
