@@ -18,8 +18,13 @@ CREATE TABLE "user2"(
 )
 
 
+
+-- add COLUMN
 ALTER TABLE user2
 ADD COLUMN password VARCHAR(255) DEFAULT 'admin123' NOT NULL
 
+
+--drop COLUMN
+ALTER TABLE user2 DROP COLUMN age
 
 SELECT  * FROM user2 
