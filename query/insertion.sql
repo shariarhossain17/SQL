@@ -9,4 +9,14 @@ CREATE TABLE "user2"(
 )
 
 
+-- way 1
 INSERT INTO user2(user_id, email, first_name, age)VALUES(1, 'sh@gmail.com', 'sh', 18);
+
+
+-- delete row WITHOUT deleting
+
+TRUNCATE TABLE user2;
+
+-- way 2
+
+INSERT INTO user2(email,first_name) VALUES ('sh@gmail.com','sh'),('sh2@gmail.com','sh2');
