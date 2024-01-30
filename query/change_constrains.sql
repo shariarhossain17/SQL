@@ -45,7 +45,15 @@ ALTER TABLE user2
     Alter COLUMN demo DROP DEFAULT;
 
 
---
+--RENAME column
+
+ALTER TABLE user2 
+    RENAME COLUMN country to demo;
+
+
+
+
+
 --insert USER
 INSERT INTO user2(email,first_name) VALUES ('sh@1.com','sh1');
 
