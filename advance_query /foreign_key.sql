@@ -18,6 +18,10 @@ CREATE TABLE employee(
     CONSTRAINT fk_constraint_dept
         FOREIGN KEY (deptID)
         REFERENCES Department(deptId)
-)
+);
 
+
+INSERT INTO employee VALUES (1,'shariar',1);
+
+SELECT * FROM employee;
 
