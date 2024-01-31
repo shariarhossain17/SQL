@@ -18,3 +18,12 @@ VALUES
 
 
 SELECT * FROM courses;
+
+
+-- update database table row
+
+-- update table_name
+--SET
+--column1=value
+--column2=value
+--where CONDITION
