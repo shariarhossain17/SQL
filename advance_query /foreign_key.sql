@@ -9,7 +9,9 @@ INSERT INTO Department VALUES (1,'Psychology');
 
 SELECT * FROM Department;
 
+-- DELETE department TABLE
 
+DELETE FROM Department WHERE deptId =1;
 -- create employee TABLE
 CREATE TABLE employee(
     employeeId SERIAL PRIMARY KEY,
