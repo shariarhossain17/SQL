@@ -6,3 +6,5 @@ CREATE TABLE Department(
 
 
 INSERT INTO Department VALUES (1,'Psychology');
+
+SELECT * FROM Department;
