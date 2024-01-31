@@ -34,3 +34,9 @@ SET
     course_name='c',
     description='dummy'
 WHERE course_id=1;
+
+
+-- delete row
+
+DELETE FROM courses 
+    WHERE course_id=1;
