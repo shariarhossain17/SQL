@@ -27,3 +27,10 @@ SELECT * FROM courses;
 --column1=value
 --column2=value
 --where CONDITION
+
+
+UPDATE courses
+SET
+    course_name='c',
+    description='dummy'
+WHERE course_id=1;
