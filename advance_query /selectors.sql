@@ -29,4 +29,12 @@ VALUES
     ('java','hell@gmail.com',60,'2024-07-11',1),
       ('javascript','script@gmail.com',60,'2024-07-11',1),
           ('c++','c@.comm',60,'2024-07-11',1);
+
+
+-- select all fields/row
+
+SELECT * FROM departments;
+
+
+SELECT * FROM employees
       
