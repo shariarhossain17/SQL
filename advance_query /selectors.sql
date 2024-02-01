@@ -19,3 +19,14 @@ CREATE TABLE IF NOT EXISTS employees(
         REFERENCES departments(deptID)
     
 )
+
+INSERT INTO departments(name) 
+VALUES ('it'),('HR'),('marketing');
+   
+
+INSERT INTO employees(name,email,salary,joining_date,deptID) 
+VALUES 
+    ('java','hell@gmail.com',60,'2024-07-11',1),
+      ('javascript','script@gmail.com',60,'2024-07-11',1),
+          ('c++','c@.comm',60,'2024-07-11',1);
+      
