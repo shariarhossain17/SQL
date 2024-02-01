@@ -36,5 +36,9 @@ VALUES
 SELECT * FROM departments;
 
 
-SELECT * FROM employees
+SELECT * FROM employees;
+
+-- select data from table
+
+SELECT employeeID,email,name FROM employees;
       
