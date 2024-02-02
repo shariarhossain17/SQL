@@ -42,6 +42,15 @@ SELECT * FROM employees;
 SELECT employeeID,email,name FROM employees;
 
 -- filtering data from table
+
+-->< <= >= <>(not)
 SELECT * FROM employees
     WHERE salary>2000 and salary<21000;
+
+
+
+--limit OFFSET asc desc
+
+-- get data descending order
+SELECT * FROM employees ORDER BY name DESC;
       
