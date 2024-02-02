@@ -57,3 +57,6 @@ SELECT * FROM employees ORDER BY name DESC;
 -- get data asc ORDER BY by NAME
 
 SELECT * FROM employees ORDER BY name ASC;      
+
+-- get data by LIMIT
+SELECT * FROM employees LIMIT 4;
