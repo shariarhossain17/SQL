@@ -64,3 +64,14 @@ SELECT * FROM employees LIMIT 4;
 
 -- get data by LIMIT and OFFSET
 SELECT * FROM employees ORDER BY salary DESC LIMIT 2 OFFSET 1;
+
+
+-- get highest salary PERMISSION
+
+SELECT * FROM employees
+    ORDER BY salary desc LIMIT 1;
+
+-- get third highest salary;
+
+SELECT * FROM employees
+    ORDER BY salary desc LIMIT 1 OFFSET 2;
