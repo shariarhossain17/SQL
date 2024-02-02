@@ -26,9 +26,9 @@ VALUES ('it'),('HR'),('marketing');
 
 INSERT INTO employees(name,email,salary,joining_date,deptID) 
 VALUES 
-    ('java','hell@gmail.com',60,'2024-07-11',1),
-      ('javascript','script@gmail.com',60,'2024-07-11',1),
-          ('c++','c@.comm',60,'2024-07-11',1);
+    ('java','hell@gmail.com',22222,'2024-07-11',1),
+      ('javascript','script@gmail.com',20000,'2024-07-11',1),
+          ('c++','c@.comm',5000,'2024-07-11',1);
 
 
 -- select all fields/row
@@ -38,7 +38,10 @@ SELECT * FROM departments;
 
 SELECT * FROM employees;
 
--- select data from table
-
+-- select some table
 SELECT employeeID,email,name FROM employees;
+
+-- filtering data from table
+SELECT * FROM employees
+    WHERE salary>2000 and salary<21000;
       
