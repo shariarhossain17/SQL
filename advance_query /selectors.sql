@@ -53,4 +53,7 @@ SELECT * FROM employees
 
 -- get data descending order
 SELECT * FROM employees ORDER BY name DESC;
-      
+
+-- get data asc ORDER BY by NAME
+
+SELECT * FROM employees ORDER BY name ASC;      
