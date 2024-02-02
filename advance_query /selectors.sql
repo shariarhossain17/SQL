@@ -60,3 +60,7 @@ SELECT * FROM employees ORDER BY name ASC;
 
 -- get data by LIMIT
 SELECT * FROM employees LIMIT 4;
+
+
+-- get data by LIMIT and OFFSET
+SELECT * FROM employees ORDER BY salary DESC LIMIT 2 OFFSET 1;
