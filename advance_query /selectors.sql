@@ -86,4 +86,24 @@ SELECT * FROM employees WHERE employeeid IN(1,5);
 SELECT * FROM employees WHERE employeeid NOT IN(1,5);
 
 
+-- BETWEEN
+
+SELECT * FROM employees WHERE salary BETWEEN 1000 and 5000;
+
+
+-- LIKE
+
+
+-- all CHARACTER
+SELECT * FROM employees WHERE name LIKE '%c%';
+
+--start CHARACTER
+ SELECT * FROM employees WHERE name LIKE 'c%';
+
+  SELECT * FROM employees WHERE name LIKE '%c';
+
+
+
+
+
 
