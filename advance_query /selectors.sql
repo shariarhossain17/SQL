@@ -75,3 +75,15 @@ SELECT * FROM employees
 
 SELECT * FROM employees
     ORDER BY salary desc LIMIT 1 OFFSET 2;
+
+
+-- in ,not in ,between,like   
+
+--in
+SELECT * FROM employees WHERE employeeid IN(1,5);
+
+-- not IN
+SELECT * FROM employees WHERE employeeid NOT IN(1,5);
+
+
+
