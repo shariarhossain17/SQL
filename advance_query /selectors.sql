@@ -100,7 +100,8 @@ SELECT * FROM employees WHERE name LIKE '%c%';
 --start CHARACTER
  SELECT * FROM employees WHERE name LIKE 'c%';
 
-  SELECT * FROM employees WHERE name LIKE '%c';
+-- end CHARACTER
+SELECT * FROM employees WHERE name LIKE '%c';
 
 
 
