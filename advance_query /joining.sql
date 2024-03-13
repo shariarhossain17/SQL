@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS students(
 )
 
 
-INSERT INTO classes(className) VALUES ('CSE'),('PHYSICS'),('BANGLA')
+INSERT INTO classes(className) VALUES ('OTHERS'),('ENGLISH'),('MATH')
 
 
 INSERT INTO students(name,email,phone_number,classID) VALUES('sh','sh1@gmail.com','01',1),('s3','sh3@gmail.com','01',2),('sh3','sh1@gmail.com','01',3)
@@ -43,3 +43,13 @@ SELECT * FROM classes;
 
 SELECT students.name,students.email,classes.className FROM students
  INNER JOIN classes ON classes.classID = students.classID;
+
+
+
+ SELECT students.name,students.email,classes.className FROM students
+ LEFT JOIN classes ON classes.classID = students.classID;
+
+
+
+SELECT students.name,students.email,classes.className FROM students
+RIGHT JOIN classes ON classes.classID = students.classID;
