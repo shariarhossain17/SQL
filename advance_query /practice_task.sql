@@ -105,3 +105,35 @@ CREATE TABLE departments (
 )
 
 CREATE Table salaries ( emp_id INT, salary DECIMAL(10, 2) )
+
+INSERT INTO
+    employees (
+        emp_id, emp_name, department_id
+    )
+VALUES (1, 'John Doe', 1),
+    (2, 'Jane Smith', 2),
+    (3, 'Michael Johnson', 1),
+    (4, 'Emily Brown', 3);
+
+INSERT INTO
+    departments (
+        department_id, department_name
+    )
+VALUES (1, 'HR'),
+    (2, 'IT'),
+    (3, 'Finance');
+
+INSERT INTO
+    salaries (emp_id, salary)
+VALUES (1, 50000.00),
+    (2, 60000.00),
+    (3, 55000.00),
+    (4, 52000.00);
+
+SELECT d.department_name, avg(s.salary) as salary
+FROM
+    departments d
+    INNER JOIN employees e on e.department_id = d.department_id
+    INNER JOIN salaries s on s.emp_id = e.emp_id
+GROUP BY
+    d.department_name;
