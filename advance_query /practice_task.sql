@@ -93,3 +93,15 @@ FROM
     students s
     INNER JOIN enrollment e on e.student_id = s.student_id
     INNER JOIN courses cr on cr.course_id = e.course_id;
+
+-- task 4
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY, emp_name VARCHAR(50), department_id INT
+)
+
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY, department_name VARCHAR(50)
+)
+
+CREATE Table salaries ( emp_id INT, salary DECIMAL(10, 2) )
