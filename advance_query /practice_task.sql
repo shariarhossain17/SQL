@@ -190,3 +190,23 @@ GROUP BY
     e.department_id
 HAVING
     COUNT(*) >= 2;
+
+--task 8
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY, product_name VARCHAR(10), stock_quantity INT
+)
+
+INSERT INTO
+    products (
+        product_id, product_name, stock_quantity
+    )
+VALUES (101, 'Widget A', 20),
+    (102, 'Widget B', 10),
+    (103, 'Widget C', 15),
+    (104, 'Widget D', 5);
+
+SELECT product_name, stock_quantity
+from products
+WHERE
+    stock_quantity >= 15;
