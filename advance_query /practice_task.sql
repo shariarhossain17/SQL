@@ -191,7 +191,7 @@ GROUP BY
 HAVING
     COUNT(*) >= 2;
 
---task 8
+--task 7
 
 CREATE TABLE products (
     product_id INT PRIMARY KEY, product_name VARCHAR(10), stock_quantity INT
@@ -210,3 +210,56 @@ SELECT product_name, stock_quantity
 from products
 WHERE
     stock_quantity >= 15;
+
+--task 8
+
+CREATE Table customers (
+    customer_id INT PRIMARY KEY, customer_name VARCHAR(50), city VARCHAR(50)
+)
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY, customer_id INT, order_date DATE
+);
+
+CREATE TABLE order_items (
+    item_id INT PRIMARY KEY, order_id INT, product_name VARCHAR(50), quantity INT
+);
+
+INSERT INTO
+    customers (
+        customer_id, customer_name, city
+    )
+VALUES (1, 'John Doe', 'New York'),
+    (
+        2, 'Jane Smith', 'Los Angeles'
+    ),
+    (
+        3, 'Michael Johnson', 'Chicago'
+    );
+
+INSERT INTO
+    orders (
+        order_id, customer_id, order_date
+    )
+VALUES (101, 1, '2023-01-05'),
+    (102, 2, '2023-02-10'),
+    (103, 1, '2023-02-15');
+
+INSERT INTO
+    order_items (
+        item_id, order_id, product_name, quantity
+    )
+VALUES (1, 101, 'Widget A', 2),
+    (2, 101, 'Widget B', 3),
+    (3, 102, 'Widget C', 1),
+    (4, 103, 'Widget A', 4);
+
+SELECT c.customer_name, o.order_date, SUM(ot.quantity)
+from
+    customers c
+    JOIN orders o on o.customer_id = c.customer_id
+    JOIN order_items ot on ot.order_id = o.order_id
+GROUP BY
+    c.customer_name,
+    o.order_date
+ORDER BY o.order_date ASC;
