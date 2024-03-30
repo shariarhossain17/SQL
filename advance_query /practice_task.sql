@@ -284,3 +284,16 @@ SELECT product_id, SUM(sale_amount) AS total_sale_amount
 FROM sales
 GROUP BY
     product_id;
+
+CREATE TABLE student (
+    student_id INT PRIMARY KEY, student_name VARCHAR(50), age INT
+);
+
+INSERT INTO
+    student (student_id, student_name, age)
+VALUES (1, 'Alice', 22),
+    (2, 'Bob', 21),
+    (3, 'Charlie', 23);
+
+SELECT min(age) as min_age, max(age) as max_age, avg(age) as avg_age
+FROM student;
