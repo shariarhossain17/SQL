@@ -263,3 +263,24 @@ GROUP BY
     c.customer_name,
     o.order_date
 ORDER BY o.order_date ASC;
+
+--task 9
+
+CREATE TABLE sales (
+    sell_id INT PRIMARY KEY, product_id INT, sale_data DATE, sale_amount DECIMAL(10, 2)
+)
+
+INSERT INTO
+    sales (
+        sell_id, product_id, sale_data, sale_amount
+    )
+VALUES (1, 101, '2023-01-05', 200.00),
+    (2, 102, '2023-01-06', 300.00),
+    (3, 101, '2023-02-10', 150.00),
+    (4, 103, '2023-02-15', 400.00),
+    (5, 102, '2023-03-20', 250.00);
+
+SELECT product_id, SUM(sale_amount) AS total_sale_amount
+FROM sales
+GROUP BY
+    product_id;
